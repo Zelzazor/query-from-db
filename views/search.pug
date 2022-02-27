@@ -2,12 +2,27 @@ html
     head
         link(rel="stylesheet", href="style.css")
     body
-        h1 Resultados de la búsqueda
-        div 
+        .container
+            .row
+                .col-12
+                    h1 Búsqueda de productos
+            .row
+                .col-12
+                    form.form(action='/search' method='get')
+                        .form-group
+                            label(for='q') Buscar: 
+                            input#q.form-control(type='text' name='q' required)
+                        .form-group
+                            input(type='submit' value='Submit')
+            p
+                a(href='/create') Crear nuevo artículo...
         each val in data 
             div.card
-                div.card-content
-                    h3.card-title= val.title
-                    p= val.description
+                div.row            
+                    div.card-image 
+                        img(src=val.imageUrl, alt=val.title, width="200px", height="200px")
+                    div.card-content
+                        h3.card-title= val.title
+                        p= val.description
                 div.card-price
-                    p RD$#{val.price}.00
+                    p RD$#{val.price}

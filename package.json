@@ -1,7 +1,7 @@
 {
-  "name": "upload-to-db",
+  "name": "query-from-db",
   "version": "1.0.0",
-  "description": "Esta es una aplicación para subir imágenes e información a una base de datos",
+  "description": "Esta es una aplicación que permite consultar desde una base de datos",
   "main": "index.js",
   "author": "Felipe Ramírez",
   "license": "MIT",

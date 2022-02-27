@@ -1,9 +1,10 @@
 .container {
   width: 100%;
   margin: 0 auto;
-  height: 100vh;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .form {
@@ -22,7 +23,7 @@
 .card-content{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start;
     padding: 10px;
 }
 
@@ -42,4 +43,11 @@
 
 textarea{
     resize: vertical;
+}
+
+.row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px;
 }

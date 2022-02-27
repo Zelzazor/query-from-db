@@ -11,4 +11,5 @@ Para ejecutar el presente programa, debe ejecutar los siguientes comandos en la 
 
 - yarn start
 
-Vaya a localhost:3000/create para crear nuevos artículos de compra. 
+Vaya a localhost:3000/ para buscar entre artículos de compra existentes.
+Vaya a localhost:3000/create para crear nuevos artículos de compra.

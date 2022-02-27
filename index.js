@@ -12,6 +12,23 @@ app.use('/uploads', express.static('uploads'));
 
 app.set('view engine', 'pug');
 
+app.get('/', (req, res) => {
+    db.serialize(()=>{
+        let stmt = db.prepare('SELECT * FROM articulos');
+        stmt.run();
+        stmt.all((err, rows) => {
+            if (err) {
+                console.error(err.message);
+                return;
+            }
+            return res.render('index', {data: rows});
+        });
+        stmt.finalize();
+        
+    });
+
+})
+
 app.get('/create', (req, res) => {
     res.render('create');
 });
@@ -27,18 +44,6 @@ app.post('/create', upload.single('image'),(req, res) => {
             console.log("Added successfully");
         });
         stmt.finalize();
-        stmt = db.prepare('SELECT * FROM articulos');
-        stmt.each((err, row) => {
-            if (err) {
-                console.error(err.message);
-                return;
-            }
-            console.log(row);
-        }, 
-        (err,count) => {
-            stmt.finalize();
-        });
-
     });
     
     res.redirect('/success');
@@ -50,8 +55,26 @@ app.get('/success', (req, res) => {
 
 app.get('/search', (req, res) => {
     let query = req.query.q;
-    let result = data.filter(item => item.title.toLowerCase().includes(query.toLowerCase()) || item.description.toLowerCase().includes(query.toLowerCase()));
-    res.render('search', {data: result});
+    if(query && query.length > 0){
+        db.serialize(()=>{
+            let stmt = db.prepare('SELECT * FROM articulos WHERE title LIKE ? OR description LIKE ?');
+            stmt.run("%"+query+"%", "%"+query+"%");
+            stmt.all((err, rows) => {
+                if (err) {
+                    console.error(err.message);
+                    return;
+                }
+                return res.render('search', {data: rows});
+            });
+        stmt.finalize();
+        
+        });
+    }
+    else{
+        res.redirect('/');
+    }
+    //console.log(results)
+    
 });
 
 app.listen(3000, () => {
