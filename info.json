@@ -1,0 +1,52 @@
+[
+    {
+        "title": "Aguacate",
+        "description": "Rico y nutritivo aguacate",
+        "price": "10"
+    },
+    {
+        "title": "Aguacate maduro",
+        "description": "Aguacate ya maduro",
+        "price": "5"
+    },
+    {
+        "title": "Aguacate con chile",
+        "description": "Disponible en chile",
+        "price": "7"
+    },
+    {
+        "title": "Guayaba",
+        "description": "Rica y nutritiva guayaba",
+        "price": "14"
+    },
+    {
+        "title": "Guayaba Linda",
+        "description": "Rica y nutritiva guayaba linda",
+        "price": "14"
+    },
+    {
+        "title": "Guayaba fresca",
+        "description": "Rica y nutritiva guayaba fresca",
+        "price": "14"
+    },
+    {
+        "title": "Pera",
+        "description": "Rica y nutritiva pera",
+        "price": "8"
+    },
+    {
+        "title": "Pera fresca",
+        "description": "Rica y nutritiva pera fresca",
+        "price": "8"
+    },
+    {
+        "title": "Yuca cocida",
+        "description": "Rica y nutritiva yuca cocida",
+        "price": "10"
+    },
+    {
+        "title": "Yuca",
+        "description": "Rica y nutritiva yuca cocida",
+        "price": "10"
+    }
+]

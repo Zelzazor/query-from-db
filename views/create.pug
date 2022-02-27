@@ -1,0 +1,16 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet", href="style.css")
+        title Crear publicación de artículo
+    body 
+        h1 Crear publicación de artículo 
+        form(action="/create", method="post", class="form-column", enctype="multipart/form-data")
+            input(type="text", name="title", placeholder="Título", required)
+            textarea(cols="30", rows="10", name="description", placeholder="Descripción", required)
+            input(type="number", name="price", placeholder="Precio", required)
+            input(type="file", name="image", id="image", placeholder="Imagen", required, accept="image/*")
+            input(type="submit", value="Crear")

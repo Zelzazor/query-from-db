@@ -1,0 +1,14 @@
+Requerimientos:
+ - Node.js
+ - Yarn
+
+Para ejecutar el presente programa, debe ejecutar los siguientes comandos en la terminal:
+
+
+- yarn
+
+- yarn initialize
+
+- yarn start
+
+Vaya a localhost:3000/create para crear nuevos artículos de compra. 

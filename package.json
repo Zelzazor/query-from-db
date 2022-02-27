@@ -1,0 +1,24 @@
+{
+  "name": "upload-to-db",
+  "version": "1.0.0",
+  "description": "Esta es una aplicación para subir imágenes e información a una base de datos",
+  "main": "index.js",
+  "author": "Felipe Ramírez",
+  "license": "MIT",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon index.js",
+    "initialize": "node init/database.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.2",
+    "express": "^4.17.3",
+    "multer": "^1.4.4",
+    "pug": "^3.0.2",
+    "sqlite3": "^5.0.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}

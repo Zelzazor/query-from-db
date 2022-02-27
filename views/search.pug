@@ -1,0 +1,13 @@
+html
+    head
+        link(rel="stylesheet", href="style.css")
+    body
+        h1 Resultados de la búsqueda
+        div 
+        each val in data 
+            div.card
+                div.card-content
+                    h3.card-title= val.title
+                    p= val.description
+                div.card-price
+                    p RD$#{val.price}.00

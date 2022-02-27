@@ -1,0 +1,45 @@
+.container {
+  width: 100%;
+  margin: 0 auto;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.form {
+    display: flex;
+    gap: 5px;
+}
+
+.card {
+    display: flex;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    justify-content: space-between;
+}
+
+.card-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.card-price {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.form-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px;
+    gap: 5px;
+}
+
+textarea{
+    resize: vertical;
+}
