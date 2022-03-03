@@ -1,5 +1,5 @@
 {
-  "name": "query-from-db",
+  "name": "migrant-db",
   "version": "1.0.0",
   "description": "Esta es una aplicación que permite consultar desde una base de datos",
   "main": "index.js",
