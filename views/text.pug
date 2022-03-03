@@ -1,0 +1,46 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet", href="style.css")
+        title Mujeres y niños desplazados
+    body 
+        h1 Mujeres y niños desplazados
+        p Ingrese los datos del migrante:
+        form(action="/text", method="post", class="form-column", enctype="multipart/form-data")
+            label(for="TipoDocumento") Tipo de documento:
+            select#TipoDocumento(name="TipoDocumento" required)
+                option(value="Cédula") Cédula
+                option(value="Pasaporte") Pasaporte
+            input(type="text", name="Documento", placeholder="Documento", required)
+            input(type="text", name="Nombres", placeholder="Nombres", required)
+            input(type="text", name="Apellidos", placeholder="Apellidos", required)
+            label(for="EstadoCivil") Estado civil:
+            select#EstadoCivil(name="EstadoCivil" required)
+                option(value="Soltero") Soltero
+                option(value="Casado") Casado
+                option(value="Divorciado") Divorciado
+                option(value="Viudo") Viudo
+            label(for="Sexo") Sexo:
+            select#Sexo(name="Sexo" required)
+                option(value="Femenino") Femenino
+                option(value="Masculino") Masculino
+            label(for="FechaNacimiento") Fecha de nacimiento:
+            input(type="date", name="FechaNacimiento", placeholder="Fecha de nacimiento", required)
+            label(for="FechaIngreso") Fecha de ingreso:
+            input(type="datetime-local", name="FechaIngreso", placeholder="Fecha de ingreso", required)
+            label(for="TipoDocumentoMadre") Tipo de documento de la madre:
+            select#TipoDocumentoMadre(name="TipoDocumentoMadre")
+                option(value="Cédula") Cédula
+                option(value="Pasaporte") Pasaporte
+            input(type="text", name="DocumentoMadre", placeholder="Documento de la madre")
+            input(type="file", name="image", id="image", placeholder="Imagen", required, accept="image/*")
+            label(for="Movimiento") Movimiento:
+            select#Movimiento(name="Entrada_Salida" required)
+                option(value="Salida") Salida
+                option(value="Entrada") Entrada
+            input(type="text" name="Lugar", placeholder="Lugar", required)
+            input(type="text" name="Pais", placeholder="Pais", required)
+            input(type="submit", value="Recognize")

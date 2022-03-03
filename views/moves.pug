@@ -1,0 +1,14 @@
+html
+    head
+        link(rel="stylesheet", href="style.css")
+    body
+        each val in data 
+            div.card
+                div.row            
+                    div.card-content
+                        h3.card-title #{val.TipoDocumento + " " + val.Documento}
+                        p= val.Lugar 
+                        p= val.Pais
+                        p= val.FechaIngreso
+                        p= val.Entrada_Salida
+                        

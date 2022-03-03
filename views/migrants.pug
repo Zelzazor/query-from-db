@@ -1,0 +1,25 @@
+html
+    head
+        link(rel="stylesheet", href="style.css")
+    body
+        each val in data 
+            div.card
+                div.row            
+                    div.card-image 
+                        img(src=val.Foto, alt=val.Nombres, width="200px", height="200px")
+                    div.card-content
+                        h3.card-title #{val.Nombres + " " + val.Apellidos}
+                        p 
+                            strong= val.TipoDocumento
+                        p= val.Documento
+                        p= val.FechaNacimiento
+                        p= val.Sexo 
+                        p= val.EstadoCivil
+                        p 
+                            strong Documento Madre
+                        if val.DocumentoMadre != null
+                            
+                            p= val.TipoDocumentoMadre + " " + val.DocumentoMadre
+                        else
+                            p Sin Documento
+
